@@ -1,20 +1,20 @@
-import java.util.*;
-
-public class Main
+public class MainProgram
 {
-	public static void main(String[] args)
-	{
-		System.out.println("Hello World!");
+  public static void main(String[] args) {
+		Lazada lazada_item1, lazada_item2;
+		Item_1 iteminfo1=new Item_1("Tote Bag",99,"sold out");
+		Item_2 iteminfo2=new Item_2("Shoulder Bag",100,"sold out");
 
-		Scanner input = new Scanner(System.in);
+		lazada_item1=iteminfo1;
+		System.out.println(lazada_item1.item_info());
+		System.out.println("\nProduct name: "+ lazada_item1.getProductName());
+		System.out.println("Item price: "+lazada_item1.getPrice());
+		System.out.println("item info: "+iteminfo1.getItemInfo());	
 
-		System.out.print("Enter a number: ");
-		double number1 = input.nextDouble();
-
-		System.out.print("Enter second number: ");
-		double number2 = input.nextDouble();
-
-		double product = number1 * number2;
-		System.out.printf("The product of both numbers is: %f", product);
+		lazada_item2=iteminfo2;
+		System.out.println(lazada_item2.item_info());
+		System.out.println("\nProduct name: "+ lazada_item2.getProductName());
+		System.out.println("Item price: "+ lazada_item2.getPrice());
+		System.out.println("item info: "+iteminfo2.getItemInfo());	
 	}
 }
